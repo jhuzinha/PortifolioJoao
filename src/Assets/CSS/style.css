@@ -1,0 +1,22 @@
+:root {
+    --header_color: rgb(252, 224, 77);
+    --subtitle: rgba(174, 154, 45, 0.92);
+    --button: rgb(217, 217, 217);
+    --bg: rgba(210,208,207,.43);
+    --borda: rgba(210,208,207,.43);
+}
+
+
+/* :root {
+
+    --principal_color: #090909;
+    --second_color: #ffff00;
+    --yellow_white: #ffff81;
+    --subtitle: #090909;
+    --button: rgba(210,208,207,.43);
+    --bg: #636263;;
+    --borda: rgba(210,208,207,.43);
+    
+
+
+} */
