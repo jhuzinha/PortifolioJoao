@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import image1 from "../Assets/images/image1.png"
 import image2 from "../Assets/images/image2.png"
 import image3 from "../Assets/images/image3.png"
-import {BsNewspaper} from 'react-icons/bs';
 
 
 export default function Main() {
@@ -26,6 +24,26 @@ export default function Main() {
 function Materias() {
     const materiasData = [
         {
+            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-24-at-12.38.29.jpeg.webp',
+            title: "“Precisamos investir nos grupos mais vulneráveis”, diz Carlos Alberto Medeiros",
+            url: "https://www.fundacaoastrojildo.org.br/precisamos-investir-nos-grupos-mais-vulneraveis-diz-carlos-alberto-medeiros/"
+        },
+        {
+            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/05/Zygmunt-Bauman.jpg.webp',
+            title: 'Público pode fazer empréstimo de livros de Bauman na Biblioteca Salomão Malina',
+            url: "https://www.fundacaoastrojildo.org.br/publico-pode-fazer-emprestimo-das-obras-de-bauman-na-biblioteca-salomao-malina/"
+        },
+        {
+            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-22-at-09.52.04.jpeg.webp',
+            title: "“A vida seria muito difícil sem música”, diz curador de concertos da FAP",
+            url: "https://www.fundacaoastrojildo.org.br/a-vida-seria-muito-dificil-sem-musica-diz-curador-de-concertos-da-fap/"
+        },
+        {
+            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2021/08/divulgacao_Vladimir_Carvalho.jpg.webp',
+            title: "Vladimir Carvalho destaca produção nacional: “Nosso cinema é excelente”",
+            url: "https://www.fundacaoastrojildo.org.br/vladimir-carvalho-destaca-producao-nacional-nosso-cinema-e-excelente/"
+        },
+        {
             image: image2,
             title: "Primeiro filme dirigido por negra, Amor Maldito aborda homossexualidade",
             url: "https://www.fundacaoastrojildo.org.br/primeiro-filme-dirigido-por-negra-no-brasil-amor-maldito-aborda-homossexualidade/"
@@ -34,11 +52,6 @@ function Materias() {
             image: image1,
             title: '“Sofri agressões físicas em batalhas de rap por parte de MCs transfóbicos”',
             url: "https://www.fundacaoastrojildo.org.br/sofri-agressoes-fisicas-em-batalhas-de-rap-por-parte-de-mcs-transfobicos/"
-        },
-        {
-            image: image3,
-            title: "Filme Homem do Pau Brasil aborda “sexo com leveza”, diz cineasta",
-            url: "https://www.fundacaoastrojildo.org.br/filme-homem-do-pau-brasil-aborda-sexo-com-leveza-diz-cineasta/"
         }
 
     ];
@@ -104,8 +117,10 @@ const Container = styled.div`
 
 const SubMaterias = styled.figure`
     padding: 20px;
-    width: 254px;
+    width: 300px;
+    min-height: 170px;
     height: auto;
+    padding: 20px;
     background: var(--button);
     border-radius: 7px;
     display: flex;
@@ -126,7 +141,11 @@ const SubMaterias = styled.figure`
     }
     
     img {
-        margin-bottom: 10px;
+        object-fit: cover;
+        width: 50%;
+        border-radius: 6px;
+        
+
     }
 `
 const Borda = styled.div`

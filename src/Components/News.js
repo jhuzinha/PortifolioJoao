@@ -1,8 +1,15 @@
 import styled from "styled-components"
+import image3 from "../Assets/images/image3.png"
 
 
 export default function News() {
-    const news = [{
+    const news = [
+        {
+        image: image3,
+        name: "Filme Homem do Pau Brasil aborda “sexo com leveza”, diz cineasta",
+        url: "https://www.fundacaoastrojildo.org.br/filme-homem-do-pau-brasil-aborda-sexo-com-leveza-diz-cineasta/"
+        },
+        {
         name: "Biblioteca Salomão Malina oferece empréstimo gratuito de 68 livros sobre PCB",
         url: "https://www.fundacaoastrojildo.org.br/biblioteca-salomao-malina-oferece-emprestimo-gratuito-de-68-livros-sobre-pcb/",
         image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2019/01/IMG_0037.jpg'
@@ -118,8 +125,8 @@ const Notice = styled.figure `
     margin: 10px;
     width: 300px;
     min-height: 170px;
+    padding: 10px;
     height: auto;
-    padding: 20px;
     background-color: var(--button);
     box-shadow: 1px 1px 1px 1px grey;
     border-radius: 25px;
