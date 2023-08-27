@@ -1,19 +1,17 @@
-import styled from "styled-components"
-import { BsLinkedin } from 'react-icons/bs'
-import { BsWhatsapp } from 'react-icons/bs'
-import { Link } from "react-router-dom"
+import styled from "styled-components";
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 export default function Footer() {
     return (
         <>
         <Container>
-        <Borda></Borda>
+        <Borda />
         <ul>
            <li> <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-costa-reis/" target="__blank"><BsLinkedin color="black" /></a></li>
             <li> <a href="https://futeloose.wixsite.com/blog" target="_blank"> BLOG  </a></li>
             <li><a href="https://wa.me/5506181170298?text=" target="_blank"><BsWhatsapp color="black" /></a>  </li>
         </ul>
-        <Borda></Borda>
+        <Borda />
         </Container>
         </>
 

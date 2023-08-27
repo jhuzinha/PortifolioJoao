@@ -1,21 +1,22 @@
 import styled from "styled-components";
-import image1 from "../Assets/images/image1.png"
-import image2 from "../Assets/images/image2.png"
-import image3 from "../Assets/images/image3.png"
+import myCV from '../Assets/images/Curriculo2023.pdf'
 
 
 export default function Main() {
     return (
         <>
             <Container>
-                <h1> Joao Vitor Costa Reis </h1>
-                <p> Estudande de jornalismo </p>
-                <div>
+                <ContainerApresentation>
+                    <div>
+                        <h1> Joao Vitor Costa Reis </h1>
+                        <p> JORNALISTA </p>
+                    </div>
+                    <DownloadCV />
+                </ContainerApresentation>
+                <ContainerMaterias>    
                     <Materias />
-                </div>
+                </ContainerMaterias>
             </Container>
-
-
         </>
     )
 }
@@ -24,38 +25,16 @@ export default function Main() {
 function Materias() {
     const materiasData = [
         {
-            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-24-at-12.38.29.jpeg.webp',
-            title: "“Precisamos investir nos grupos mais vulneráveis”, diz Carlos Alberto Medeiros",
-            url: "https://www.fundacaoastrojildo.org.br/precisamos-investir-nos-grupos-mais-vulneraveis-diz-carlos-alberto-medeiros/"
+            url: 'https://www.metropoles.com/esportes/liga-europa-final-tem-disputa-entre-roma-de-mourinho-e-sevilla',
+            title: "Liga Europa: final tem disputa entre Roma de Mourinho e Sevilla",
+            image: "https://uploads.metropoles.com/wp-content/uploads/2023/05/31090347/GettyImages-1494803210-600x400.jpg"
         },
         {
-            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/05/Zygmunt-Bauman.jpg.webp',
-            title: 'Público pode fazer empréstimo de livros de Bauman na Biblioteca Salomão Malina',
-            url: "https://www.fundacaoastrojildo.org.br/publico-pode-fazer-emprestimo-das-obras-de-bauman-na-biblioteca-salomao-malina/"
+            image: 'https://uploads.metropoles.com/wp-content/uploads/2021/12/13101321/Taca-da-Liga-Europa-600x400.jpg',
+            title: 'Leverkusen x Roma pela Europa League: alemães não vencem há 4 jogos',
+            url: "https://www.metropoles.com/esportes/leverkusen-x-roma-pela-europa-league-alemaes-nao-vencem-ha-4-jogos"
         },
-        {
-            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2022/06/WhatsApp-Image-2022-06-22-at-09.52.04.jpeg.webp',
-            title: "“A vida seria muito difícil sem música”, diz curador de concertos da FAP",
-            url: "https://www.fundacaoastrojildo.org.br/a-vida-seria-muito-dificil-sem-musica-diz-curador-de-concertos-da-fap/"
-        },
-        {
-            image: 'https://www.fundacaoastrojildo.org.br/wp-content/uploads/2021/08/divulgacao_Vladimir_Carvalho.jpg.webp',
-            title: "Vladimir Carvalho destaca produção nacional: “Nosso cinema é excelente”",
-            url: "https://www.fundacaoastrojildo.org.br/vladimir-carvalho-destaca-producao-nacional-nosso-cinema-e-excelente/"
-        },
-        {
-            image: image2,
-            title: "Primeiro filme dirigido por negra, Amor Maldito aborda homossexualidade",
-            url: "https://www.fundacaoastrojildo.org.br/primeiro-filme-dirigido-por-negra-no-brasil-amor-maldito-aborda-homossexualidade/"
-        },
-        {
-            image: image1,
-            title: '“Sofri agressões físicas em batalhas de rap por parte de MCs transfóbicos”',
-            url: "https://www.fundacaoastrojildo.org.br/sofri-agressoes-fisicas-em-batalhas-de-rap-por-parte-de-mcs-transfobicos/"
-        }
-
     ];
-
 
     function NovaAba(url) {
         window.open(url)
@@ -76,13 +55,46 @@ function Materias() {
             })}
 
         </>
-
-
     )
 }
 
+
+function DownloadCV() {
+    return (
+        <>  
+            <ButtonDownloadCV>
+                <a href={myCV} download="CurriculoJoaoVitorCostaReis.pdf"> Download CV </a>
+            </ButtonDownloadCV>
+        </>
+    )
+}
+
+const ContainerApresentation = styled.div`
+    display: flex;
+    flex-direction: column;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--subtitle);  
+        margin-bottom: 20px;
+    }
+`;
+
+const ButtonDownloadCV = styled.div`
+    border-radius: 5px;
+    background-color: #9e90bd;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 200px;
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+`;
+
 const Container = styled.div`
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -96,14 +108,14 @@ const Container = styled.div`
         text-align: center;
         font-weight: 700;
         font-size: 66px;
-        color: var(--header_color_text);
+        color: var(--color_black_text);
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
-    p {
+    /* p {
         color: var(--subtitle);  
         margin-bottom: 100px;
-    }
-
+    } */
+/* 
     div {
         display: flex;
         justify-content: space-evenly;
@@ -111,7 +123,7 @@ const Container = styled.div`
         width: 90%;
         max-width: 1100px;
 
-    }
+    } */
 
 `
 
@@ -136,7 +148,7 @@ const SubMaterias = styled.figure`
     } 
 
     h6 {
-        color: var(--header_color_text);
+        color: var(--color_black_text);
         text-align: center;
     }
     
@@ -154,3 +166,11 @@ const Borda = styled.div`
     width: 50%;
     margin: 10px;
 `
+
+const ContainerMaterias = styled.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+`;

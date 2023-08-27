@@ -63,10 +63,11 @@ a {
 }
 
 :root {
-    --header_color: rgb(252, 224, 77);
-	--header_color_text: black;
-    --subtitle: rgba(174, 154, 45, 0.92);
+    --header_color: rgb(0 72 255);
+	--header_color_text: rgb(217, 217, 217);
+    --subtitle: rgb(96 100 210 / 92%);
     --button: rgb(217, 217, 217);
     --bg: rgba(210,208,207,.43);
-    --borda: rgba(210,208,207,.43);
+    --borda: rgb(217, 217, 217);
+	--color_black_text: black;
 }

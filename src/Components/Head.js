@@ -1,17 +1,24 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export default function Head() {
+    const [clicked, setClicked] = useState('home');
+
+    function onClickItem(typeItem) {
+        setClicked(typeItem);
+    }
+
     return (
         <>
             <Header>
                 <h1> JV </h1>
                 <Navigation >
-                    <Link to={"/"}  style={{ textDecoration: 'none' }}> <h3> Início </h3> </Link>
-                    <Link to={"/noticias"}  style={{ textDecoration: 'none' }}> <h3> Notícias </h3> </Link>
-                    <Link to={"/sobre"}  style={{ textDecoration: 'none' }}> <h3> Sobre </h3> </Link>
+                    <Link to={"/"}  style={{ textDecoration: clicked === 'home' ? 'underline' : 'none' }}> <h3 onClick={() => onClickItem('home')}> Início </h3> </Link>
+                    <Link to={"/noticias"}  style={{ textDecoration: clicked === 'notice' ? 'underline' : 'none' }}> <h3 onClick={() => onClickItem('notice')}> Notícias </h3> </Link>
+                    <Link to={"/sobre"}  style={{ textDecoration: clicked === 'about' ? 'underline' : 'none' }}> <h3 onClick={() => onClickItem('about')}> Sobre </h3> </Link>
+                    <Link to={"/videos"}  style={{ textDecoration: clicked === 'videos' ? 'underline' : 'none' }}> <h3 onClick={() => onClickItem('videos')}> Vídeos </h3> </Link>
                 </Navigation>
-
             </Header>
         </>
     )
@@ -47,6 +54,7 @@ const Navigation = styled.div`
         color: var(--header_color_text);
         cursor: pointer; 
         position: relative;
+        padding: 2px;
     }
     h3:before {
         content: "";
